@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site para Criptografar e Descriptografar</title>
+    <link rel="stylesheet" href="customizarIndex.css">
+    <script type="text/javascript" src="javinhascripto.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Seja bem-vindo ao Site de Criptografia</h1>
+    <p>Aqui você pode criptografar e descriptografar suas mensagens de forma fácil e segura!</p>
+</header>
+
+<div class="container">
+    <div class="esquerda">
+        <h2>Escreva o seu texto aqui!</h2>
+        <textarea id="texto" rows="10" cols="30"></textarea>
+        <div class="controles">
+            <select id="acao">
+                <option value="criptografar">Criptografar</option>
+                <option value="descriptografar">Descriptografar</option>
+            </select>
+            <button id="criptografar">Criptografar</button>
+        </div>
+    </div>
+    <div class="direita">
+        <h2>Veja seu resultado aqui!</h2>
+        <textarea id="resultado" rows="10" cols="30" readonly></textarea>
+        <button id="copiar">Copiar</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("criptografar").addEventListener("click", processarAcao);
+    document.getElementById("copiar").addEventListener("click", copiarTexto);
+</script>
+
+</body>
+</html>
